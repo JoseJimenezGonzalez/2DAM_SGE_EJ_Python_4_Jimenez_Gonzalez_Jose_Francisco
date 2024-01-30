@@ -14,9 +14,9 @@ with open(archivo_csv, mode='r') as file:
     # Crear un objeto lector de CSV
     lector_csv = csv.DictReader(file, delimiter=";")
 
-    # Iterar sobre las filas del CSV y agregar a la lista de diccionarios
     for fila in lector_csv:
-        lista_juegos.append(fila)
+        nombre_juego = fila['Juego']
+        lista_juegos.append({nombre_juego: fila})
 
 # Mostrar la lista resultante
 print(lista_juegos)

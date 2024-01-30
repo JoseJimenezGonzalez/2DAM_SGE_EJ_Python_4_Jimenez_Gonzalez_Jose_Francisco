@@ -1,12 +1,12 @@
 #Ej7.
-#Crear una función que tome una lista de números y devuelva el factorial de ese número. Reduce()
+#Crear una función que tome una lista de números y devuelva el factorial de esos numeros, se suma el total. Reduce()
 from functools import reduce
-lista_numeros = [1, 2, 3, 4]
+lista_numeros = [1, 2, 3, 4] #Factorial = 1 + 2 + 6 + 24 = 33
 
-def factorial(numero):
+def operacion(acumulador, numero):
     factorial = 1
     for i in range(2, numero + 1):
         factorial *= i
-    return factorial
+    return acumulador + factorial
 
-print(list(reduce(factorial, 1,lista_numeros)))
+print(reduce(operacion, lista_numeros))
