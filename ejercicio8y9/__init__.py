@@ -24,7 +24,7 @@ aprobados = {nombre: nota for nombre, nota in notas.items() if nota >= 5}
 suspendidos = {nombre: nota for nombre, nota in notas.items() if nota < 5}
 
 print("Aprobados:", aprobados)
-print("Suspendidos:", suspendidos)
+print("Suspensos:", suspendidos)
 
 #Ejercicio 9 Crea 2 archivos csv para el ejercicio anterior.
 
